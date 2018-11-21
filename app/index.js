@@ -1,18 +1,18 @@
 var React = require('react');
 var ReactDom = require('react-dom');
-require(index.css);
+require('./index.css');
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
-			Hello World!
+			Hello World! @ 18.37min
 			</div>
 		)
 	}
 }
 
-ReactDOM.render(
+ReactDom.render(
 	<App />,
 	document.getElementById('app')
 )

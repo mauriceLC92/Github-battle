@@ -1,9 +1,16 @@
 {
-  "name": "Github-battle",
+  "name": "github-battle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "babel": {
+	  "presets": [
+		  "@babel/preset-env",
+		  "@babel/preset-react"
+	  ]
+  },
   "scripts": {
+	"create": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
