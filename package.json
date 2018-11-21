@@ -10,7 +10,8 @@
 	  ]
   },
   "scripts": {
-	"create": "webpack",
+	"create": "webpack -w",
+	"start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
