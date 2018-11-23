@@ -6,8 +6,10 @@ class Popular extends React.Component {
         this.state = {
             selectedLanguage: 'All'
         };
-
-        this.updateLanguge = this.updateLanguge.bind(this);
+        // this = {};
+        this.updateLanguge = this.updateLanguge.bind(this); // Here we are essnetially making sure that whenever we call this.updateLanguge that the this keyword will be bound to that context
+        // We want this.updateLanguage to be a function that has the this keyword iside of it to be bound to whatever we pass in, and we are passing in 'this', therefore the this keyword to be bound to it in the correct context no matter what
+        // No matter what context this.updateLanuage is called in, it will always have the correct this keyword
     }
 
     updateLanguge(lang) {
