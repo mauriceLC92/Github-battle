@@ -1,6 +1,6 @@
 var React = require('react');
 var Popular = require('./Popular');
-
+var FriendList = require('./FriendList');
 class App extends React.Component {
 	render() {
 		return (
