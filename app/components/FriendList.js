@@ -12,7 +12,6 @@ function Friend (props) {
 					>
 						{friend}
 					</li>
-
 				)
 			})}
 		</ul>
