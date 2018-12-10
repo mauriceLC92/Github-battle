@@ -35,7 +35,7 @@ RepoGrid.propTypes = {
 	repos: PropTypes.array.isRequired,
   }
 
-function SelectLanguage(props) {
+function SelectLanguage(props) { // Stateless functional component
 	var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 	return (
 		<ul className='languages'>
@@ -86,16 +86,16 @@ class Popular extends React.Component {
 			repos: null,
 		};
 		// this = {};
-		this.updateLanguge = this.updateLanguge.bind(this); // Here we are essnetially making sure that whenever we call this.updateLanguge that the this keyword will be bound to that context
+		this.updateLangauge = this.updateLangauge.bind(this); // Here we are essnetially making sure that whenever we call this.updateLanguge that the this keyword will be bound to that context
 		// We want this.updateLanguage to be a function that has the this keyword iside of it to be bound to whatever we pass in, and we are passing in 'this', therefore the this keyword to be bound to it in the correct context no matter what
 		// No matter what context this.updateLanuage is called in, it will always have the correct this keyword
 	}
 
 	componentDidMount() {
-		this.updateLanguge(this.state.selectedLanguage);
+		this.updateLangauge(this.state.selectedLanguage);
 	}
 
-	updateLanguge(lang) {
+	updateLangauge(lang) {
 		this.setState(function () { // At this point we do not know what the 'this' keyword is going to be bound to
 			return {
 				selectedLanguage: lang,
@@ -117,7 +117,7 @@ class Popular extends React.Component {
 			<div>
 				<SelectLanguage
 					selectedLanguage={this.state.selectedLanguage}
-					onSelect={this.updateLanguge} />
+					onSelect={this.updateLangauge} />
 					{!this.state.repos ? <p>LOADING</p> : <RepoGrid repos={this.state.repos} />}
 			</div>
 		)
