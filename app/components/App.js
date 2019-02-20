@@ -2,8 +2,8 @@ var React = require('react');
 var Popular = require('./Popular');
 var Home = require('./Home');
 var Battle = require('./Battle');
-var Results = require('./Results')
-var Nav = require('./Nav')
+var Results = require('./Results');
+var Nav = require('./Nav');
 
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
