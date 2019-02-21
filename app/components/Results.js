@@ -3,6 +3,7 @@ var queryString = require('query-string');
 var Link = require('react-router-dom');
 var PlayerPreview = require('./PlayerPreview');
 var PropTypes = require('prop-types');
+var Loading = require('./Loading');
 
 var api = require('../utils/api');
 
@@ -89,7 +90,7 @@ class Results extends React.Component {
 		var loading = this.state.loading;
 
 		if (loading === true) {
-			return <p>loading...</p>
+			return <Loading />
 		}
 
 		if (error) {
@@ -100,7 +101,6 @@ class Results extends React.Component {
 				</div>
 			)
 		}
-
 
 		return (
 			<div className='row'>
